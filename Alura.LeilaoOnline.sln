@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.WebApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.Dados", "Alura.LeilaoOnline.Dados\Alura.LeilaoOnline.Dados.csproj", "{7C733F15-4F1C-497A-B81E-DD4272EECF64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.LeilaoOnline.Selenium", "Alura.LeilaoOnline.Selenium\Alura.LeilaoOnline.Selenium.csproj", "{E5B69F28-7FC2-4072-807B-F39A377527A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alura.LeilaoOnline.Selenium", "Alura.LeilaoOnline.Selenium\Alura.LeilaoOnline.Selenium.csproj", "{E5B69F28-7FC2-4072-807B-F39A377527A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

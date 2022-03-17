@@ -8,13 +8,23 @@ using Xunit;
 
 namespace Alura.LeilaoOnline.Selenium
 {
-    public class AoNavegarParaHome
+    public class AoNavegarParaHome : IClassFixture<TestFixture.TestFixture>
     {
+        private IWebDriver driver;
+
+        //Setup - inicialização do teste.
+        public AoNavegarParaHome(TestFixture.TestFixture fixture)
+        {
+            driver = fixture.Driver;
+        }
+
+        
+
         [Fact]
         public void DadoChromeAbertoDeveMostrarLeiloesNoTitulo()
         {
             //arrange - Abrir navegador
-            IWebDriver driver = new ChromeDriver(TestHelper.PastaDoExecutavel);
+            
             
 
             //act - Navegar para a url em questão
@@ -32,7 +42,7 @@ namespace Alura.LeilaoOnline.Selenium
         {
 
             //arrange - Abrir navegador
-            IWebDriver driver = new ChromeDriver(TestHelper.PastaDoExecutavel);
+            
 
 
             //act - Navegar para a url em questão
