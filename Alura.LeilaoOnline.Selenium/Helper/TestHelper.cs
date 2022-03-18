@@ -11,7 +11,7 @@ namespace Alura.LeilaoOnline.Selenium.Helpers
     public static class TestHelper
     {
         //( => ) expressão lambda
-        public static string PastaDoExecutavel => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); //camminho do executável do chrome.
+        public static string PastaDoExecutavel => Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location); //caminho do executável do chrome.
 
     }
 }
