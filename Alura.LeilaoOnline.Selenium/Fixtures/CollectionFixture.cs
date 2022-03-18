@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Alura.LeilaoOnline.Selenium.Fixture
+namespace Alura.LeilaoOnline.Selenium.Fixtures
 {
     [CollectionDefinition("Chrome Driver")]
-    public class CollectionFixture : ICollectionFixture<TestFixture.TestFixture>
+    public class CollectionFixture : ICollectionFixture<TestFixture>
     {
       
         

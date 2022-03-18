@@ -6,7 +6,7 @@ using System.IO;
 using System.Reflection;
 using Xunit;
 
-namespace Alura.LeilaoOnline.Selenium
+namespace Alura.LeilaoOnline.Selenium.Fixtures
 {
     [Collection ("Chrome Driver")]
     public class AoNavegarParaHome 
@@ -14,7 +14,7 @@ namespace Alura.LeilaoOnline.Selenium
         private IWebDriver driver;
 
         //Setup - inicialização do teste.
-        public AoNavegarParaHome(TestFixture.TestFixture fixture)
+        public AoNavegarParaHome(TestFixture fixture)
         {
             driver = fixture.Driver;
         }

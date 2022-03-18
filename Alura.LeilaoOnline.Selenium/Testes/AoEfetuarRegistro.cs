@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using Xunit;
+using Alura.LeilaoOnline.Selenium.Fixtures;
 
 namespace Alura.LeilaoOnline.Selenium.Testes
 { 
-    [Collection("Chrome Drive")]
+    [Collection ("Chrome Drive")]
     public class AoEfetuarRegistro
     {
         private IWebDriver driver;
 
-        public AoEfetuarRegistro(TestFixture.TestFixture fixture)
+        public AoEfetuarRegistro(TestFixture fixture)
         {
             driver = fixture.Driver;
         }
@@ -44,9 +45,9 @@ namespace Alura.LeilaoOnline.Selenium.Testes
 
             //inserir os dados no formulário
             inputNome.SendKeys("Daniel Portugal");
-            inputEmail.SendKeys("nathanielly.oliveira@rumosolucoes.com");
-            inputPassword.SendKeys("teste");
-            inputConfirmPassword.SendKeys("teste");
+            inputEmail.SendKeys("daniel.portugal@caelum.com.br");
+            inputPassword.SendKeys("123");
+            inputConfirmPassword.SendKeys("123");
 
 
 

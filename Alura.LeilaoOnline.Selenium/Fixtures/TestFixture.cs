@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Alura.LeilaoOnline.Selenium.TestFixture
+namespace Alura.LeilaoOnline.Selenium.Fixtures
 {
     //criação do drive e limpeza (setup and teardown)
     public class TestFixture : IDisposable
