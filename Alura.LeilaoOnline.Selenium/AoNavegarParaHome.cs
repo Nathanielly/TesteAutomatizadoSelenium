@@ -57,6 +57,32 @@ namespace Alura.LeilaoOnline.Selenium.Fixtures
 
         }
 
+        [Fact]
+        public void DadoChromeAbertoFormRegistroNaoDeveMostrarMensagemDeErro()
+        {
+
+            //arrange - Abrir navegador
+
+
+
+            //act - Navegar para a url em questão
+            driver.Navigate().GoToUrl("http://localhost:5000");
+
+
+            //assert
+            var form = driver.FindElement(By.TagName("form"));
+            var spans = form.FindElements(By.TagName("span"));
+
+            foreach (var span in spans)
+            {
+                Assert.True(string.IsNullOrEmpty(span.Text));
+
+            }
+
+
+
+        }
+
     }
 
     
