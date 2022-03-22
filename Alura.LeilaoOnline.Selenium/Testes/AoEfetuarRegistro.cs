@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using Xunit;
 using Alura.LeilaoOnline.Selenium.Fixtures;
+using Alura.LeilaoOnline.Selenium.PageObjects;
 
 namespace Alura.LeilaoOnline.Selenium.Testes
 { 
@@ -138,23 +139,23 @@ namespace Alura.LeilaoOnline.Selenium.Testes
 
 
             //arrange 
-            driver.Navigate().GoToUrl("http://localhost:5000");
+            var registroPO = new RegistroPageObject(driver);
+            registroPO.Visitar();
 
-            var inputEmail = driver.FindElement(By.Id("Email"));
-            inputEmail.SendKeys("Nath");
-
-            var botaoRegistro = driver.FindElement(By.Id("btnRegistro"));
+            registroPO.PreencherFormulario(
+                nome: "", 
+                email: "nath", 
+                password: "" ,
+                confirmPassword: "" );
 
 
             //act 
-            botaoRegistro.Click(); //clicar no botao de registrar
+            registroPO.SubmeterFormulario();
 
 
-            //assert
-            IWebElement elemento = driver.FindElement(By.CssSelector("span.msg-erro[data-valmsg-for=Email]"));
-           
-            Assert.Equal("Please enter a valid email address.",elemento.Text);
-            //displayed retorna booleano.
+            //assert 
+            Assert.Equal("Please enter a valid email address.", registroPO.EmailMensagemErro);
+            
 
 
 
